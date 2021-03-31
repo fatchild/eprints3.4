@@ -1,3 +1,10 @@
 archives
 cfg
 tmp
+flavours/zero_lib/
+ingredients/xapian_facets/
+lib/static/javascript/auto/20_prototype.js.disbaled
+lib/static/javascript/auto/55_menu.js.dis
+lib/static/style/ie6.css.dis
+lib/templates/default_internal.xml.save_eo_30_3_21
+lib/static/favicon.ico.old

@@ -3,82 +3,108 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:epc="http://eprints.org/ep3/control">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title><epc:pin ref="title" textonly="yes"/> - <epc:phrase ref="archive_name"/></title>
     <link rel="icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon"/>
     <epc:pin ref="head"/>
   </head>
-  <body>
+  <body class="bg-white">
     <epc:pin ref="pagetop"/>
-    <div id="wrapper">
+    <div class="container-fluid min-vh-100 p-0" style="margin-top:56px">
       <header>
         <div class="ep_tm_header ep_noprint">
-          <nav aria-label="Main Navigation">
-            <ul role="menu" class="ep_tm_menu">
-              <li>
-                <a href="{$config{rel_path}}/" title="{phrase('template/navigation:home:title')}" role="menuitem">
-                  <epc:phrase ref="template/navigation:home"/>
-                </a>
-              </li>
-              <li>
-                <a href="{$config{rel_path}}/information.html" title="{phrase('template/navigation:about:title')}" role="menuitem">
-                  <epc:phrase ref="template/navigation:about"/>
-                </a>
-              </li>
-              <li>
-                <a href="{$config{rel_path}}/view/" title="{phrase('template/navigation:browse:title')}" role="menuitem" menu="ep_tm_menu_browse" aria-owns="ep_tm_menu_browse">
-                  <epc:phrase ref="template/navigation:browse"/>
-                </a>
-                <ul role="menu" id="ep_tm_menu_browse" style="display:none;">
-                  <li>
-                    <a href="{$config{rel_path}}/view/subjects/" role="menuitem">
+          <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top shadow">
+            <div class="container">
+            <a class="navbar-brand" href="{$config{rel_path}}/">
+              <img src="{$config{rel_path}}/images/white_eprints_logo.png" alt="Logo" style="height:30px;" class="rounded" />
+            </a>           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item mx-2">
+                  <a href="{$config{rel_path}}/" title="{phrase('template/navigation:home:title')}" role="menuitem" class="nav-link text-light">
+                    <epc:phrase ref="template/navigation:home"/>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{$config{rel_path}}/information.html" title="{phrase('template/navigation:about:title')}" role="menuitem" class="nav-link text-light mx-2">
+                    <epc:phrase ref="template/navigation:about"/>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-light mx-2" href="{$config{rel_path}}/view/" title="{phrase('template/navigation:browse:title')}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <epc:phrase ref="template/navigation:browse"/>
+                  </a>
+                  <div role="menu" id="ep_tm_menu_browse" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a href="{$config{rel_path}}/view/" role="menuitem" class="dropdown-item">
+                      <epc:phrase ref="template/navigation:browse"/>
+                    </a>
+		    <div class="dropdown-divider"></div>
+                    <a href="{$config{rel_path}}/view/subjects/" role="menuitem" class="dropdown-item">
                       <epc:phrase ref="bin/generate_views:indextitleprefix"/>
                       <epc:phrase ref="viewname_eprint_subjects"/>
                     </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        
-          <div class="ep_tm_searchbar">
-            <div>
-              <epc:pin ref="login_status"/>
-            </div>
-            <div>
-              <epc:pin ref="languages"/>
-              <form method="get" accept-charset="utf-8" action="{$config{rel_cgipath}}/search" role="search" aria-label="Publication simple search">
-                <input class="ep_tm_searchbarbox" size="20" type="text" name="q" aria-labelledby="searchbutton"/>
-                <input class="ep_tm_searchbarbutton" value="{phrase('lib/searchexpression:action_search')}" type="submit" name="_action_search" id="searchbutton"/>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0" method="get" accept-charset="utf-8" action="{$config{rel_cgipath}}/search" role="search" aria-label="Publication simple search ep_tm_searchbar">
+                <input class="form-control mr-sm-2 ep_tm_searchbarbox" type="text" name="q" aria-labelledby="searchbutton" placeholder="Search"/>
+                <button class="btn btn-outline-light my-2 my-sm-0 ep_tm_searchbarbutton"  type="submit" name="_action_search" id="searchbutton"><epc:phrase ref="lib/searchexpression:action_search"/></button>
                 <input type="hidden" name="_action_search" value="Search"/>
                 <input type="hidden" name="_order" value="bytitle"/>
                 <input type="hidden" name="basic_srchtype" value="ALL"/>
                 <input type="hidden" name="_satisfyall" value="ALL"/>
-              </form>
+	      </form>
+            </div>
+            </div>
+          </nav>
+
+          <div class="bg-light border-bottom">
+            <div class="container">
+              <epc:pin ref="login_status"/>
+            </div>
+            <div>
+              <epc:pin ref="languages"/>
             </div>
           </div>
         </div>
       </header>
 
-      <div id="main_content">
-        <div class="ep_tm_page_content">
-          <h1 id="page-title" class="ep_tm_pagetitle">
+      <div class="container-fluid w-100 p-0 mx-0 mt-0 mb-3 ep_tm_title">
+        <img alt="EPrints Background" src="{$config{rel_path}}/images/background_frontpage_34.png" class="w-100 position-relative shadow" style="height:200px; object-fit: cover; object-position: center top;"/>
+        <div class="container">
+          <h1 id="page-title" class="ep_tm_pagetitle text-left bg-dark rounded text-white p-4 mt-3 position-relative w-50 h1" style="top: -180px; margin-bottom: -75px; width: 100%;">
             <epc:pin ref="title"/>
           </h1>
+        </div>
+      </div>
+
+      <div id="main_content" class="container"> 
+        <div class="ep_tm_page_content bg-white">
           <epc:pin ref="page"/>
         </div>
       </div>
 
-      <footer>
-        <div class="ep_tm_footer ep_noprint">
-          <epc:phrase ref="template:about_eprints"/>
-          <div class="ep_tm_eprints_logo">
+    </div> <!-- wrapper -->
+      <footer class="bg-light border-top mt-3">
+        <div class="ep_tm_footer ep_noprint container py-3 text-center">
+          <div class="p-4">
+            <epc:phrase ref="template:about_eprints"/>
+          </div>
+          <div class="ep_tm_eprints_logo pt-2 pb-4">
             <a rel="external" href="http://eprints.org/software/">
-              <img alt="EPrints Logo" src="{$config{rel_path}}/images/eprintslogo.png"/><img alt="EPrints Flavour Logo" src="{$config{rel_path}}/images/flavour.png" style="width: 28px"/>
+              <img alt="EPrints Logo" src="{$config{rel_path}}/images/eprintslogo.png" class="pr-4"/>
+              <img alt="EPrints Flavour Logo" src="{$config{rel_path}}/images/flavour.png" style="width: 28px"/>
             </a>
           </div>
         </div>
       </footer>
-    </div> <!-- wrapper -->
   </body>
 </html>
