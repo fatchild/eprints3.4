@@ -4,18 +4,27 @@
 <xpage:title>Dataset Dictionary</xpage:title>
 <xpage:body>
 
-<a href='dataset_dictionary.html?1#eprint'>eprint</a> |
-<a href='dataset_dictionary.html?2#user'>user</a> |
-<a href='dataset_dictionary.html?3#file'>file</a> |
-<a href='dataset_dictionary.html?4#document'>document</a> |
-<a href='dataset_dictionary.html?5#subject'>subject</a> |
-<a href='dataset_dictionary.html?6#history'>history</a> |
-<a href='dataset_dictionary.html?7#access'>access</a>
+<a class="text-primary" href='dataset_dictionary.html?1#eprint'>eprint</a> |
+<a class="text-primary" href='dataset_dictionary.html?2#user'>user</a> |
+<a class="text-primary" href='dataset_dictionary.html?3#file'>file</a> |
+<a class="text-primary" href='dataset_dictionary.html?4#document'>document</a> |
+<a class="text-primary" href='dataset_dictionary.html?5#subject'>subject</a> |
+<a class="text-primary" href='dataset_dictionary.html?6#history'>history</a> |
+<a class="text-primary" href='dataset_dictionary.html?7#access'>access</a>
 
-<div id="dataset_dictionary"></div>
+<div class="table mt-5" id="dataset_dictionary"></div>
+
 <script type="text/javascript">
-var dataset = location.hash.substr(1);
-new Ajax.Updater('dataset_dictionary',"/cgi/dataset_dictionary?nohead=1&amp;dataset="+dataset ,{method:'get'});
+  var jQ = jQuery.noConflict();
+
+  jQ(document).ready(function () {
+    var dataset = location.hash.substr(1);
+    var file = "/cgi/dataset_dictionary?nohead=1&amp;dataset="+dataset;
+
+    jQ.get(file, function(data, status){
+      jQ('#dataset_dictionary').html(data);
+    });
+  });
 </script>
 
 </xpage:body>

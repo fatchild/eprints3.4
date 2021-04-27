@@ -4,7 +4,7 @@
 <xpage:title><epc:phrase ref="archive_name" /> Contact Information</xpage:title>
 <xpage:body>
 
-<p><epc:phrase ref="archive_name" /> Site Administrator: <a href="mailto:{$config{adminemail}}"><epc:print expr="$config{adminemail}" /></a></p>
+<p class="jumbotron"><epc:phrase ref="archive_name" /> Site Administrator: <a href="mailto:{$config{adminemail}}"><epc:print expr="$config{adminemail}" /></a></p>
 
 </xpage:body>
 

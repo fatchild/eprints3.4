@@ -4,16 +4,16 @@
 <xpage:title>Accessibility</xpage:title>
 <xpage:body>
 
-<div class="ep_msg_message">
-  <div class="ep_msg_message_content">
-    <div class="ep_msg_message_icon" style="width: 32px;">
-      <img alt="Message" src="/style/images/message.png"/>
+<div class="ep_msg_message alert alert-warning border shadow mb-5">
+  <div class="ep_msg_message_content d-flex">
+    <div class="ep_msg_message_icon d-inline-block p-3">
+      <img alt="Message" src="/style/images/message.png" style="height:40px;"/>
     </div>
-    <div class="ep_msg_message_text">This page is intended as a generic accessibility statement for EPrints and should be amended as required before deployment of your EPrints repository. In particular the <code>organisation_name</code> phrase may need to be set if upgrading to EPrints 3.4.2+.</div>
+    <div class="ep_msg_message_text d-inline-block pt-2 pl-2">This page is intended as a generic accessibility statement for EPrints and should be amended as required before deployment of your EPrints repository. In particular the <code>organisation_name</code> phrase may need to be set if upgrading to EPrints 3.4.2+.</div>
   </div>
 </div>
 
-<h2>Table of Contents</h2>
+<h2 class="mt-5">Table of Contents</h2>
 <ul>
   <li><a href="#accessibility-statement-for-website-name">Accessibility statement for <epc:phrase ref="archive_name" /></a>
     <ul>
@@ -35,7 +35,7 @@
   <li><a href="what-were-doing-to-improve-accessibility">What we’re doing to improve accessibility</a></li>
 </ul>
 
-<h2 id="accessibility-statement-for-website-name">Accessibility statement for <epc:phrase ref="archive_name" /></h2>
+<h2 class="mt-5" id="accessibility-statement-for-website-name">Accessibility statement for <epc:phrase ref="archive_name" /></h2>
 <p><epc:phrase ref="archive_name" /> is run by <epc:phrase ref="organisation_name" />. We want as many people as possible to be able to use <epc:phrase ref="archive_name" />. For example, that means you should be able to:
   <ul>
     <li>change colours, contrast levels and fonts</li>
@@ -76,12 +76,12 @@
 <h3 id="enforcement-procedure">Enforcement procedure</h3>
 <p>The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the 'accessibility regulations'). If you’re not happy with how we respond to your complaint, <a rel="external" href="https://www.equalityadvisoryservice.com/">contact the Equality Advisory and Support Service (EASS)</a>.</p>
 
-<h2 id="technical-information-about-this-websites-accessibility">Technical information about  <epc:phrase ref="archive_name" />'s accessibility</h2>
+<h2 class="mt-5" id="technical-information-about-this-websites-accessibility">Technical information about  <epc:phrase ref="archive_name" />'s accessibility</h2>
 <p><epc:phrase ref="organisation_name" /> is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
 <!-- <p>This website is partially compliant with the <a rel="external" href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines version 2.1</a> AA standard, due to the non-compliances listed below.</p> -->
 <p><epc:phrase ref="archive_name" /> is not compliant with the <a rel="external" href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines version 2.1</a> AA standard. The non-accessible sections are listed below.</p>
 
-<h2 id="non-accessible-content">Non accessible content</h2>
+<h2 class="mt-5" id="non-accessible-content">Non accessible content</h2>
 <p>The content listed below is non-accessible for the following reasons.</p>
 <p>We are always looking to improve the accessibility of <epc:phrase ref="archive_name" />. If you find any problems not listed on this page or think we are not meeting accessibility requirements, contact by email: <a href="mailto:{$config{adminemail}}"><epc:print expr="$config{adminemail}" /></a>.</p>
 
@@ -165,14 +165,14 @@ Other Example:
 <p>Most audio and video files do not have captions. This fails WCAG 2.1 success criterion 1.2.2 (captions - prerecorded).</p>
 -->
 
-<h2 id="how-we-tested-this-website">How we tested <epc:phrase ref="archive_name" /></h2>
+<h2 class="mt-5" id="how-we-tested-this-website">How we tested <epc:phrase ref="archive_name" /></h2>
 <p><epc:phrase ref="archive_name" /> was last comprehensively tested on <b><epc:phrase ref="accessibility_report_last_tested_date"/></b>.  You can read the <a href="report.html">comprehensive report</a>.</p>
 <epc:phrase ref="accessibility_report_summary"/>
 
 <!--
 [Note: publishing an accessibility roadmap is optional. It’s a good idea to publish one if you want to be specific about the order you’re planning to tackle accessibility issues, and there’s no space to do so in the accessibility statement itself.] 
 -->
-<h2 id="what-were-doing-to-improve-accessibility">What we’re doing to improve accessibility</h2>
+<h2 class="mt-5" id="what-were-doing-to-improve-accessibility">What we’re doing to improve accessibility</h2>
 <p>Our <a href="roadmap.html">accessibility roadmap</a> shows how and when we plan to improve accessibility on <epc:phrase ref="archive_name" />.</p>    
 
 <p><em>This statement was first prepared on <b><epc:phrase ref="accessibility_statement_prepared_date"/></b>. It was last updated on <b><epc:phrase ref="accessibility_statement_last_updated_date"/></b>.</em></p>

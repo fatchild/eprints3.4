@@ -4,9 +4,11 @@
 <xpage:title>Authorisation Required</xpage:title>
 <xpage:body>
 
-<p>In order to access some areas of the repository you require a username and password.</p>
+<div class="jumbotron">
+  <p>In order to access some areas of the repository you require a username and password.</p>
 
-<p><a href="{$config{perl_url}}/register">Register</a> / <a href="{$config{perl_url}}/reset_password">Reset my password</a></p>
+  <p><a href="{$config{perl_url}}/register">Register</a> / <a href="{$config{perl_url}}/reset_password">Reset my password</a></p>
+</div>
 
 </xpage:body>
 </xpage:page>

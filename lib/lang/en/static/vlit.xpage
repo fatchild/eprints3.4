@@ -8,8 +8,7 @@
 <!-- You should remove this block to show that you approve of     -->
 <!-- the transcopyright statement below. (or edit the statement)   -->
 
-<epc:phrase ref="ruler" />
-<h2>The <epc:phrase ref="archive_name" /> admin has not yet approved the statement below. Please contact them for confirmation of this copyright statement: <a href="mailto:{$config{adminemail}}"><epc:print expr="$config{adminemail}" /></a>.</h2> 
+<h2 class="jumbotron">The <epc:phrase ref="archive_name" /> admin has not yet approved the statement below. Please contact them for confirmation of this copyright statement: <a href="mailto:{$config{adminemail}}"><epc:print expr="$config{adminemail}" /></a>.</h2> 
 <epc:phrase ref="ruler" />
 <!-- ************************************************************* -->
 
@@ -21,7 +20,7 @@
 </ul>
 <p>thus maintaining and offering the original context of such quotations.</p>
 
-<h2 id="remarks">Remarks</h2>
+<h2 class="mt-5" id="remarks">Remarks</h2>
 
 <p>This server will send out arbitrary quotations into new windows
  and allow users to jump to the original contexts of such quotations.

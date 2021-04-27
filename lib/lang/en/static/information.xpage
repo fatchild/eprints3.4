@@ -4,12 +4,13 @@
 <xpage:title>About the Repository</xpage:title>
 <xpage:body>
 
-<p>This site is powered by <a href="{$config{base_url}}/eprints/">EPrints 3</a>, free software developed by the University of Southampton.</p>
+<p class="jumbotron bg-light border shadow">This site is powered by <a href="{$config{base_url}}/eprints/">EPrints 3</a>, free software developed by the University of Southampton.</p>
 
-<h2 id="contact-information">Contact Information</h2>
+<div class="jumbotron">
+  <h2 id="contact-information">Contact Information</h2>
 
-<p>Any correspondence concerning this specific repository should be sent to <a href="mailto:{$config{adminemail}}"><epc:print expr="$config{adminemail}" /></a>.</p>
-
+  <p>Any correspondence concerning this specific repository should be sent to <a href="mailto:{$config{adminemail}}"><epc:print expr="$config{adminemail}" /></a>.</p>
+</div>
 
 </xpage:body>
 </xpage:page>
