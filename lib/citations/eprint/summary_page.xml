@@ -6,7 +6,7 @@
 
 <cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:epc="http://eprints.org/ep3/control" xmlns:cite="http://eprints.org/ep3/citation" >
 
-  <p style="margin-bottom: 1em">
+  <p class="jumbotron py-4" style="margin-bottom: 1em">
     <epc:print expr="$item.citation('default_for_summary_page')" />
   </p>
 
@@ -27,13 +27,14 @@
   
     <epc:if test="length($docs) gt 0">
       <epc:phrase ref="page:fulltext" />
-      <div>
+      <div class="row mt-4">
         <epc:foreach expr="$docs" iterator="doc">
-          <div class="ep_summary_page_document">
-            <span><epc:print expr="$doc.icon('HoverPreview','noNewWindow','previewRight')}" /></span>
-            <span>
+          <div class="ep_summary_page_document col-md-3 h-100">
+          <div class="card shadow-sm">
+            <div class="card-body d-flex justify-content-center"><epc:print expr="$doc.icon('HoverPreview','noNewWindow','previewRight')}" /></div>
+            <div class="card-header">
               <epc:print expr="$doc.citation('default')" /><br />
-              <a href="{$doc.url()}" class="ep_document_link"><epc:phrase ref="summary_page:download"/> (<epc:print expr="$doc.doc_size().human_filesize()" />)</a>
+              <a href="{$doc.url()}" class="ep_document_link btn btn-primary mt-3 mb-0 d-flex justify-content-center"><epc:phrase ref="summary_page:download"/> (<epc:print expr="$doc.doc_size().human_filesize()" />)</a>
               <epc:if test="$doc.is_public()">
 			  <epc:choose>
 			  <epc:when test="$doc.thumbnail_url('video_mp4').is_set()">
@@ -48,7 +49,7 @@
 			  </epc:choose>
 			  </epc:if>
               <epc:if test="!$doc.is_public() and $item.contact_email().is_set() and eprint_status = 'archive'">
-                | <a href="{$config{http_cgiurl}}/request_doc?docid={$doc{docid}"><epc:phrase ref="request:button" /></a>
+                | <a href="{$config{http_cgiurl}}/request_doc?docid={$doc{docid}" class="btn btn-primary"><epc:phrase ref="request:button" /></a>
               </epc:if>
   
               <ul>
@@ -58,7 +59,8 @@
                 </epc:if>
               </epc:foreach>
               </ul>
-            </span>
+            </div>
+          </div>
           </div>
         </epc:foreach>
       </div>
@@ -93,6 +95,7 @@
     </tr>
   </table>
 
+  <hr/>
   <epc:if test="$flags{has_multiple_versions}">
     <epc:phrase ref="page:available_versions" />
     <epc:print expr="$version_tree" />
