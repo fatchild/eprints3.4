@@ -29,7 +29,7 @@
       <epc:phrase ref="page:fulltext" />
       <div class="row mt-4">
         <epc:foreach expr="$docs" iterator="doc">
-          <div class="ep_summary_page_document col-md-3 h-100">
+          <div class="ep_summary_page_document col-md-3 h-100 pb-2">
           <div class="card shadow-sm">
             <div class="card-body d-flex justify-content-center"><epc:print expr="$doc.icon('HoverPreview','noNewWindow','previewRight')}" /></div>
             <div class="card-header">
