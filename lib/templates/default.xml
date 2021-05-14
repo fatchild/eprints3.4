@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="{$config{rel_path}}/favicon.ico" type="image/x-icon"/>
     <epc:pin ref="head"/>
   </head>
-  <body class="bg-white">
+  <body class="bg-white" id="bootstrapMutationObserver">
     <epc:pin ref="pagetop"/>
     <div class="container-fluid min-vh-100 p-0" style="margin-top:56px">
       <header>
