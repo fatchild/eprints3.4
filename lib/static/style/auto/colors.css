@@ -92,13 +92,13 @@ h1, h2, h3, h4 {
 /* blister.css */
 
 .ep_blister_node {
-	border-color: #cccccc;
+/*	border-color: #cccccc;
 	background-color: #e8e8ff;
 	background-image: url(images/bar_solid_12px.png);
-	color: #000000;
+	color: #000000;*/
 }
 .ep_blister_node:active {
-	border-color: #276496;
+/*	border-color: #276496;*/
 }
 
 /* summary.css surround.css */
